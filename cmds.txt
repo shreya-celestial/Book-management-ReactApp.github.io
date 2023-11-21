@@ -1,0 +1,5 @@
+npm create vite@latest project-name                 // in place of project name you have to type the                                                        name you want for that project
+after running the above command select the things you want
+then get in that particular folder to install the dependencies and get them in node modules
+npm install                                         // to install dependencies and get them in node modules
+npm run dev                                         // to run the project
