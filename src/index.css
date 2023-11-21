@@ -1,68 +1,216 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
-  margin: 0;
+  margin: 0 0 50px;
+}
+
+.container {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.containerBorder {
+  width: 80%;
+  margin-top: 40px;
+  padding: 40px 40px;
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.containerBorder #insertBookBtn {
+  display: flex;
+  align-items: center;
+  background-color: #2196f3;
+  outline: none;
+  border: none;
+  padding: 10px 20px;
+  width: 95%;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.containerBorder #insertBookBtn img {
+  width: 30px;
+}
+
+.containerBorder #insertBookBtn p {
+  font-size: large;
+  width: 100%;
+  font-weight: bold;
+  color: #F0F8FF;
+}
+
+.containerBorder .insertBookDiv {
+  border: 1px solid;
+  margin-top: 20px;
+  width: 91%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.containerBorder .insertBookDiv #insertNewBookForm {
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+}
+
+.containerBorder .insertBookDiv #insertNewBookForm div{
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.containerBorder .insertBookDiv #insertNewBookForm div input{
+  flex-basis: 70%;
+  height: 40px;
+  margin: 20px 0;
+  margin-left: 70px;
+}
+
+.containerBorder .insertBookDiv #insertNewBookForm button {
+  margin: 20px auto 50px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.containerBorder .books {
+  border: 1px solid;
+  padding: 20px;
+  margin-top: 20px;
+  width: 91%;
+  text-align: center;
+}
+
+.containerBorder .books .booksList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+}
+
+.containerBorder .books .booksList h3 {
+  font-size: x-large;
+  font-weight: normal;
+  margin: 200px auto;
+}
+
+.containerBorder .books .booksList div {
+  display: flex;
+  align-items: center;
+  border: 1px solid;
+  padding: 10px 20px;
+  width: 80%;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.containerBorder .books .booksList div img {
+  width: 20px;
+}
+
+.containerBorder .books .booksList div p {
+  font-size: large;
+  width: 100%;
+  margin: 0;
+}
+
+.containerBorder .books .booksList .bookDetails {
+  margin: 0;
+  border-top: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+  cursor: default;
+}
+
+.containerBorder .books .booksList .bookDetails .deleteBtn {
+  align-self: flex-end;
+  padding: 5px 30px;
+  background-color: #ff3131;
+  border: 2px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.containerBorder .books .booksList .bookDetails div {
+  border: none;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  text-align: justify;
+  cursor: default;
+}
+
+.containerBorder .books .booksList .bookDetails span {
+  font-size: large;
+}
+
+.containerBorder .books .booksList .bookDetails p {
+  width: 60%;
+  font-size: large;
+  max-width: 60%;
+  margin-right: 20px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+.containerBorder .books .booksList .bookDetails input {
+  width: 60%;
+  font-size: large;
+  max-width: 60%;
+  margin-right: 20px;
+  margin-left: 50px;
+  cursor: pointer;
+  height: 40px;
+}
+
+.modal {
+  border: none;
+  border-radius: 8px;
+  padding: 2rem;
+  background-color: #d7fcf8;
+  text-align: center;
+}
+
+.modal h3 {
+  margin: 20px auto;
+  cursor: default;
+}
+
+.modal button {
+  padding: 8px 35px;
+  margin: 5px auto 20px;
+  background-color: #2196f3;
+  color: #F0F8FF;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.modal[open] {
+  animation: slide-in-from-top 0.35s ease-out;
+}
+
+.modal::backdrop {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+@keyframes slide-in-from-top {
+  0% {
+    transform: translateY(-15%);
+    opacity: 0;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
