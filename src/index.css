@@ -226,3 +226,142 @@ body {
     opacity: 1;
   }
 }
+
+
+
+/* Media query starts here */
+
+@media(min-width:1900px) {
+
+  .containerBorder #insertBookBtn {
+      width: 93%;
+  }
+
+}
+
+@media(min-width:1360px) and (max-width: 1900px) {
+
+  .containerBorder #insertBookBtn {
+      width: 94%;
+  }
+
+}
+
+@media(max-width: 1101px) and (min-width:900px) {
+
+  .containerBorder #insertBookBtn {
+      width: 96%;
+  }
+
+  .containerBorder .insertBookDiv, .containerBorder .books {
+      width: 91%;
+  }
+
+}
+
+@media(max-width: 900px) and (min-width: 760px)  {
+
+  .containerBorder #insertBookBtn {
+      width: 96%;
+  }
+
+  .containerBorder .insertBookDiv, .containerBorder .books {
+      width: 90%;
+  }
+  
+}
+
+@media(max-width: 760px) and (min-width: 550px) {
+
+  .containerBorder #insertBookBtn {
+      width: 97%;
+  }
+
+  .containerBorder .insertBookDiv, .containerBorder .books {
+      width: 89%;
+  }
+  
+}
+
+@media(max-width: 550px) and (min-width: 470px) {
+
+  .containerBorder #insertBookBtn {
+      width: 98%;
+  }
+
+  .containerBorder .insertBookDiv, .containerBorder .books {
+      width: 88%;
+  }
+  
+}
+
+@media(max-width: 470px) and (min-width: 395px) {
+
+  .containerBorder #insertBookBtn {
+      width: 99%;
+  }
+
+  .containerBorder .insertBookDiv, .containerBorder .books {
+      width: 87%;
+  }
+  
+}
+
+@media(max-width: 395px) {
+
+  .containerBorder #insertBookBtn {
+      width: 100%;
+  }
+
+  .containerBorder .insertBookDiv, .containerBorder .books {
+      width: 85%;
+  }
+  
+}
+
+@media(max-width: 950px) {
+
+  .containerBorder .insertBookDiv #insertNewBookForm div {
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: flex-start;
+  }
+
+  .containerBorder .insertBookDiv #insertNewBookForm div input {
+      margin-left: 0;
+      width: 100%;
+  }
+  
+}
+
+@media(max-width: 725px) {
+
+  .containerBorder .books .booksList .bookDetails #deleteBtn {
+      align-self: center;
+  }
+
+  .containerBorder .books .booksList .bookDetails div {
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: flex-start;
+  }
+
+  .containerBorder .books .booksList .bookDetails p {
+      margin-left: 0;
+      max-width: 100%;
+      width: 100%;
+      margin-top: 10px;
+  }
+
+  .containerBorder .books .booksList .bookDetails input {
+      max-width: 100%;
+      width: 100%;
+      margin-left: 0;
+  }
+
+  .containerBorder .books .booksList .bookDetails span {
+      text-decoration: underline;
+      padding-bottom: 5px;
+  }
+
+}
