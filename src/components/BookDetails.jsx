@@ -24,12 +24,13 @@ const BookDetails = ({ book, books, setBooks }) => {
     }
 
     const handleClose = () => {
-        // setDeleteBox(false);
-        console.log('yet to be done');
+        deleteBox.current.close();
     }
 
     const handleDelete = () => {
-        setBooks(books.filter(item => item.id != book.id));
+        const bookSet = books.filter(item => item.id != book.id);
+        setBooks(bookSet);
+        localStorage.setItem('books', JSON.stringify(bookSet));
     }
 
     const handleClick = (element) => {
@@ -59,6 +60,7 @@ const BookDetails = ({ book, books, setBooks }) => {
                 return data;
         });
         setBooks([...temp]);
+        localStorage.setItem('books', JSON.stringify([...temp]));
     }
 
     return (

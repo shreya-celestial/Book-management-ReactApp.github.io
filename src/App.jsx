@@ -3,9 +3,11 @@ import InsertBookHeader from "./components/InsertBookHeader";
 import InsertBook from "./components/insertBook";
 import BooksList from "./components/BooksList";
 
+const localBooks = localStorage.getItem('books');
+
 const App = () => {
     const [showInsertDiv, setShowInsertDiv] = useState(false);
-    const [books, setBooks] = useState([]);
+    const [books, setBooks] = useState(localBooks ? JSON.parse(localBooks) : []);
 
     const handleHeaderClick = () => {
         setShowInsertDiv(prevState => !prevState);
@@ -14,6 +16,7 @@ const App = () => {
     const insertNewBook = (data) => {
         const bookSet = [...books, data];
         setBooks(bookSet);
+        localStorage.setItem('books', JSON.stringify(bookSet));
         handleHeaderClick();
     }
 

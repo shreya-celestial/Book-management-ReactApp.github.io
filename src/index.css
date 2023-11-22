@@ -1,5 +1,6 @@
 body {
   margin: 0 0 50px;
+  font-family: sans-serif;
 }
 
 .container {
@@ -175,9 +176,20 @@ body {
 .modal {
   border: none;
   border-radius: 8px;
-  padding: 2rem;
   background-color: #d7fcf8;
   text-align: center;
+  padding: 0;
+}
+
+.modal form {
+  padding: 2rem;
+}
+
+.modal img {
+  float: right;
+  width: 20px;
+  margin: 10px;
+  cursor: pointer;
 }
 
 .modal h3 {
@@ -186,8 +198,8 @@ body {
 }
 
 .modal button {
-  padding: 8px 35px;
-  margin: 5px auto 20px;
+  padding: 8px 20px;
+  margin: 8px 4px;
   background-color: #2196f3;
   color: #F0F8FF;
   border: none;
